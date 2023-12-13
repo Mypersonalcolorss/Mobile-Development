@@ -33,6 +33,13 @@
         <activity android:name=".LandingActivity">
             <!-- No intent filters needed unless this is also a direct entry point -->
         </activity>
+        <activity android:name=".RegisterActivity">
+            <!-- Add any intent filters if needed -->
+        </activity>
+        <activity android:name=".PersonalColorAnalysisActivity">
+            <!-- Any specific configuration for the activity -->
+        </activity>
+
     </application>
 
 </manifest>

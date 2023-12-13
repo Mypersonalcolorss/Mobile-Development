@@ -21,15 +21,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val loginButton = findViewById<Button>(R.id.loginButton)
-        loginButton.setOnClickListener {
-            // Handle login button click
-            Toast.makeText(this, "Logging in...", Toast.LENGTH_SHORT).show()
-
-            // You can also initiate a login process or navigate to a login screen if you have one
-            // For example:
-            // val loginIntent = Intent(this, LoginActivity::class.java)
-            // startActivity(loginIntent)
+        val registerButton = findViewById<Button>(R.id.registerButton)
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
+
+        val featureButton = findViewById<Button>(R.id.featureButton)
+        featureButton.setOnClickListener {
+            // Intent to start PersonalColorAnalysisActivity
+            val intent = Intent(this, PersonalColorAnalysisActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
