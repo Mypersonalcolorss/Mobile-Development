@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background">
+
+    <ImageView
+        android:id="@+id/ivUserFace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_face_image"
+        android:contentDescription="@string/face_image"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true" />
+
+    <Button
+        android:id="@+id/btnAnalyticFaceColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/analytic_face_color"
+        android:layout_below="@id/ivUserFace"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btnAutomatic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/automatic"
+        android:layout_below="@id/btnAnalyticFaceColor"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btnDressRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dress_recomendations"
+        android:layout_below="@id/btnAutomatic"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"  />
+
+    <TextView
+        android:id="@+id/tvSkinTypeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivLock"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_lock"-->
+<!--        android:contentDescription="@string/upgrade_premium"-->
+<!--        android:layout_below="@id/btnAutomatic"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_margin="16dp" />-->
+
+    <!-- Add other views as necessary -->
+
+</RelativeLayout>
