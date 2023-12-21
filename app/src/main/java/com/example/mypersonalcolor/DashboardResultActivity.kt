@@ -28,6 +28,9 @@ class DashboardResultActivity : AppCompatActivity() {
         initNavigationDrawer()
         initUserProfileButton()
         initDashboard()
+
+        recyclerView = findViewById(R.id.recyclerViewDashboard)
+        refreshDashboardFeatures()
     }
 
     private fun initToolbar() {
@@ -61,18 +64,16 @@ class DashboardResultActivity : AppCompatActivity() {
     }
 
     private fun getDashboardFeatures(): List<DashboardFeature> {
-        val isAnalysisDone = getAnalysisCompleted()
-
         return listOf(
-//            DashboardFeature(R.drawable.ic_user, "Analysis Your Face", true, true) { navigateToFeature1() },
-            DashboardFeature(R.drawable.ic_dress, "Your Dress Recommendations", isAnalysisDone, isAnalysisDone) { navigateToFeature2() },
-            DashboardFeature(R.drawable.ic_palette, "Your Color Palettes", isAnalysisDone, isAnalysisDone) { navigateToFeature4() },
-            DashboardFeature(R.drawable.ic_avatar, "Coming Soon Feature", isAnalysisDone, isAnalysisDone) {  },
-            DashboardFeature(R.drawable.ic_skincare, "Your MakeUp Recommendations", isAnalysisDone, isAnalysisDone) { navigateToFeature3() },
-            DashboardFeature(R.drawable.ic_cs, "Coming Soon ChatBot", isAnalysisDone, isAnalysisDone) {  },
+            DashboardFeature(R.drawable.ic_dress, "Your Dress Recommendations", true, true) { navigateToFeature2() },
+            DashboardFeature(R.drawable.ic_palette, "Your Color Palettes", true, true) { navigateToFeature4() },
+            DashboardFeature(R.drawable.ic_avatar, "Coming Soon Feature", true, true) { /* Navigate to Feature */ },
+            DashboardFeature(R.drawable.ic_skincare, "Your MakeUp Recommendations", true, true) { navigateToFeature3() },
+            DashboardFeature(R.drawable.ic_cs, "Coming Soon ChatBot", true, true) { /* Navigate to Feature */ }
             // Add other features here
         )
     }
+
 
     private fun getAnalysisCompleted(): Boolean {
         val sharedPref = getSharedPreferences("MyPersonalColorPref", MODE_PRIVATE)

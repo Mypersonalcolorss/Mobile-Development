@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My Personal Color</string>
-    <string name="app_name_start">Welcome in My Personal Color App</string>
+    <string name="app_name_start">Welcome to My Personal Color App</string>
     <string name="quote_1">"Invest in your skin. It is going to represent you for a very long time." — Linden Tyler</string>
     <string name="quote_2">"The most valuable benefit of apple cider vinegar is that it helps to restore your skin’s natural balance." — Amy Leigh Mercree</string>
     <string name="quote_3">"Skin care is like dieting. You have to invest time and effort. There is no instant miracle cure." — Karen Grant</string>
@@ -19,7 +19,7 @@
     <string name="last_name">last name</string>
     <string name="logout">log out</string>
     <string name="upgrade_premium">upgrade premium</string>
-    <string name="automatic">analysis your face</string>
+    <string name="automatic">analyze your face</string>
     <string name="analytic_face_color">capture your face</string>
     <string name="face_image">face image</string>
     <string name="dress_recomendations">Your All Recommendations</string>

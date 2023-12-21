@@ -60,7 +60,7 @@
             android:id="@+id/tvFeatureName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Analysis Your Face"
+            android:text="Analyze Your Face"
             android:textSize="32sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp"

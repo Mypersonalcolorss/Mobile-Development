@@ -102,12 +102,45 @@ class FaceAnalysisActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == cameraRequestCode && resultCode == RESULT_OK) {
-            photoFile?.also {
-                val photoURI = Uri.fromFile(it)
+            photoFile?.also { file ->
+                val photoURI = Uri.fromFile(file)
                 ivUserFace.setImageURI(photoURI)
                 btnAutomatic.isEnabled = true // Enable the button
+
+                // Proceed to send the image to the server
+                uploadImageToServer(file)
             }
         }
+    }
+
+    private fun uploadImageToServer(file: File) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        val requestBody: RequestBody = MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("file", file.name, RequestBody.create("image/jpeg".toMediaTypeOrNull(), file))
+            .build()
+
+        val request: Request = Request.Builder()
+            .url("https://server-utqhuaf4va-et.a.run.app/detectskin/$userId")
+            .post(requestBody)
+            .build()
+
+        OkHttpClient().newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                runOnUiThread {
+                    Toast.makeText(this@FaceAnalysisActivity, "Failed to connect to the server: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) {
+                    runOnUiThread {
+                        Toast.makeText(this@FaceAnalysisActivity, "Error: ${response.message}", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        })
     }
 
     private fun startAutomaticFeature() {

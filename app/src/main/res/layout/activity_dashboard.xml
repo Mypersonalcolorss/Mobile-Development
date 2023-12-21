@@ -8,7 +8,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/dashboard_background">
+        android:background="@color/colorTheme">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
