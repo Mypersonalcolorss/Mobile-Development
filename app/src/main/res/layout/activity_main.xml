@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/startButton"
-        android:text="HAVE AN ACCOUNT? REGISTER" />
+        android:text="HAVEN'T AN ACCOUNT? REGISTER" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
