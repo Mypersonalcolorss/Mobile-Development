@@ -6,7 +6,7 @@
 MyPersonalColor is a comprehensive mobile application designed to assist users in discovering their personal color palette, dress recommendations, makeup suggestions, and more, tailored to their unique skin tone. The application utilizes advanced image processing and machine learning algorithms to analyze users' facial skin tone, providing personalized insights and style recommendations.
 
 <a href="https://drive.google.com/file/d/1NhPWN-GuwRsbOH-nsVPTil47938_W-VU/view?usp=sharing">
-    <img src="https://github.com/Mypersonalcolorss/Mobile-Development/blob/master/thumbnail.png" width="100" alt="Thumbnail Alt Text">
+    <img src="https://github.com/Mypersonalcolorss/Mobile-Development/blob/master/thumbnail.png" width="250" alt="Thumbnail Alt Text">
 </a>
 
 ## Features
